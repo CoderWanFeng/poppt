@@ -2,6 +2,8 @@ import os
 import time
 
 from poppt.lib.ppt.ppt2pdf_service import ppt2pdf_single
+import win32com.client
+from pathlib import *
 
 
 class MainPPT():
@@ -31,3 +33,33 @@ class MainPPT():
                 # 将ppt转成pdf文件
                 ppt2pdf_single(filename, output_filename)
                 time.sleep(3)
+
+    def ppt2img(self, intput_path, output_path, img_type):
+        '''将PPT另存为图片格式
+          arguments:
+              pptFullName: 要转换的ppt文件，
+              pptName：转换后的存放JPG文件的目录
+              imgType: 图片类型
+        '''
+        # 启动PPT
+        pptClient = win32com.client.Dispatch('PowerPoint.Application')
+        # 设置为0表示后台运行，不显示，1则显示
+        pptClient.Visible = 1
+        # 打开PPT文件
+        ppt = pptClient.Presentations.Open(intput_path)
+
+        # 另存为图片
+        # Python路径操作模块pathlib，看这篇就够了！ https://zhuanlan.zhihu.com/p/475661402
+        output_dir = Path(output_path) / str(Path(intput_path).stem)
+        if not os.path.exists(output_dir):
+            os.mkdir(output_dir)
+        # JPG是17
+        img_type_jpg = 17
+        # PNG是18
+        img_type_png = 18
+        if img_type == 'jpg':
+            ppt.SaveAs(output_dir, img_type_jpg)
+        else:
+            ppt.SaveAs(output_dir, img_type_png)
+        # 退出
+        pptClient.Quit()
