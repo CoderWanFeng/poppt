@@ -18,7 +18,7 @@ def ppt2pdf_single(filename, output_filename):
     """
     # 2). 打开PPT程序
     ppt_app = win32com.client.Dispatch('PowerPoint.Application')
-    # ppt_app.Visible = True  # 程序操作应用程序的过程是否可视化
+    ppt_app.Visible = False  # 程序操作应用程序的过程是否可视化
 
     # 3). 通过PPT的应用程序打开指定的PPT文件
     # filename = "C:/Users/Administrator/Desktop/PPT办公自动化/ppt/PPT素材1.pptx"
@@ -28,6 +28,6 @@ def ppt2pdf_single(filename, output_filename):
     # 4). 打开的PPT另存为pdf文件。17数字是ppt转图片，32数字是ppt转pdf。
     ppt.SaveAs(output_filename, 32)
     # 退出PPT程序
-    ppt_app.Quit()
+    # ppt_app.Quit()
 
 

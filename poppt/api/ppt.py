@@ -20,11 +20,11 @@ def ppt2pdf(path: str):
 
 # def ppt2img(intput_path, output_path=r'./', img_type='img'):
 #     mainPPT.ppt2img(intput_path, output_path, img_type)
-def ppt2img(intput_path, output_path, img_type):
+def ppt2img(input_path, output_path, img_type):
     """
     :param intput_path:
     :param output_path:
     :param img_type:
     :return:
     """
-    mainPPT.ppt2img(intput_path, output_path, img_type)
+    mainPPT.ppt2img(input_path, output_path, img_type)
