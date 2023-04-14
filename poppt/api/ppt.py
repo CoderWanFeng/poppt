@@ -14,8 +14,8 @@ mainPPT = MainPPT()
 
 # todo：输入文件路径
 # @except_dec()
-def ppt2pdf(path: str):
-    mainPPT.ppt2pdf(path)
+def ppt2pdf(path: str, output_path='./'):
+    mainPPT.ppt2pdf(path, output_path)
 
 
 # def ppt2img(intput_path, output_path=r'./', img_type='img'):

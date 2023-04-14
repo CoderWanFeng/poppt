@@ -14,7 +14,7 @@
 ## 📚简介
 
 
-wftools是python自动化办公的小工具的代码合集。
+poppt是python自动化办公的小工具的代码合集。
 
 -------------------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ wftools是python自动化办公的小工具的代码合集。
 ### 🍊pip 自动下载&更新
 
 ```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple wftools -U
+pip install -i https://mirrors.aliyun.com/pypi/simple/ poppt -U
 ```
 
 
@@ -81,7 +81,7 @@ python-office欢迎任何人来添砖加瓦，贡献代码，建议提交的pr�
 
 提交问题反馈时，请务必填写和python-office代码本身有关的问题，不进行有关python学习，甚至是个人练习的知识答疑和讨论。
 
-- [Github issue](https://github.com/CoderWanFeng/wftools/issues)
+- [Github issue](https://github.com/CoderWanFeng/poppt/issues)
 
 -------------------------------------------------------------------------------
 
