@@ -3,7 +3,6 @@ from pathlib import *
 import win32com.client
 from pofile import get_files, mkdir
 from poprogress import simple_progress
-
 from poppt.lib.ppt.ppt2pdf_service import ppt2pdf_single
 
 
@@ -55,3 +54,28 @@ class MainPPT():
                     ppt.SaveAs(output_dir, img_type_png)
         # 退出
         pptClient.Quit()
+
+    def merge4ppt(self, input_path: str, output_path: str, output_name: str):
+        """
+        :param path: ppt所在文件路径
+        :return: None
+        """
+
+        abs_input_path = Path(input_path).absolute()  # 相对路径→绝对路径
+        exsit, abs_output_path = mkdir(output_path)
+        ppt_file_list = get_files(abs_input_path)
+        save_path = Path(abs_output_path) / output_name
+
+        Application = win32com.client.gencache.EnsureDispatch("PowerPoint.Application")
+
+        Application.Visible = 1
+        new_ppt = Application.Presentations.Add()
+        # 执行合并操作
+        for ppt_file in simple_progress(ppt_file_list):
+            exit_ppt = Application.Presentations.Open(ppt_file)
+            print('正在操作的文件：', ppt_file)
+            page_num = exit_ppt.Slides.Count
+            exit_ppt.Close()
+            new_ppt.Slides.InsertFromFile(ppt_file, new_ppt.Slides.Count, 1, page_num)
+        new_ppt.Save()  # 括号内为保存位置：如C:\Users\Administrator\Documents\下
+        Application.Quit()

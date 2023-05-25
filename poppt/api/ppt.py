@@ -28,3 +28,7 @@ def ppt2img(input_path, output_path, img_type):
     :return:
     """
     mainPPT.ppt2img(input_path, output_path, img_type)
+
+
+def merge4ppt(input_path, output_path=r'./', output_name='merge4ppt.pptx'):
+    mainPPT.merge4ppt(input_path, output_path, output_name)
