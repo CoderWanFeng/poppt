@@ -33,14 +33,12 @@ pip install -i https://mirrors.aliyun.com/pypi/simple/ poppt -U
 
 [📘官网：https://www.python-office.com/](https://www.python-office.com/)
 
-| 序号 | 项目介绍       | 代码地址 |
-| ---- | -------------- | -------- |
-| 1    | [合同和财务系统](https://mp.weixin.qq.com/s/7Cx9f1Re9tbJVajtNVmsVA) | [源码](https://github.com/CoderWanFeng/awesome-python-framework/tree/project/1%E3%80%81%E5%90%88%E5%90%8C%E7%B3%BB%E7%BB%9F)     |
-| 2    | [人脸门禁系统](https://mp.weixin.qq.com/s/98X3nl-elyi7MYsU_uCeqA) | [源码](https://github.com/CoderWanFeng/awesome-python-framework/tree/project/2%E3%80%81Python%2BDjango%E5%AE%9E%E7%8E%B0%E5%9F%BA%E4%BA%8E%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E7%9A%84%E9%97%A8%E7%A6%81%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E3%80%90%E6%BA%90%E7%A0%81%E3%80%91)     |
-| 3    | [商场管理系统](https://mp.weixin.qq.com/s/0FR4o2ddPe-9C2ijlnTuAg) | [源码](https://github.com/CoderWanFeng/awesome-python-framework/tree/project/3、用Python实现一个商场管理系统(附源码))     |
-| 4    | [报表自动化 + 邮件自动发送](https://mp.weixin.qq.com/s/RfG502Hez7UttfHMndc4eA) | [源码](https://github.com/CoderWanFeng/awesome-python-framework/tree/project/4%E3%80%81Python%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%9A%E5%AE%9E%E7%8E%B0%E6%8A%A5%E8%A1%A8%E8%87%AA%E5%8A%A8%E5%8C%96%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E5%88%B0%E7%9B%AE%E7%9A%84%E9%82%AE%E7%AE%B1)     |
-| 5    | 爬取招聘网站 | [源码](https://github.com/CoderWanFeng/awesome-python-framework/tree/project/5、Python招聘岗位信息聚合系统（拥有爬虫爬取、数据分析、可视化、互动等功能）)     |
 
+| 序号 | 方法名    | 功能      | 视频（文档）                                                            | 演示代码                                                                                  |
+| ---- | --------- | --------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| 1    | ppt2pdf   | PPT转PDF  | [视频](https://www.bilibili.com/video/BV17Y411c792)                     | [源码](https://github.com/CoderWanFeng/python-office/blob/master/demo/poppt/ppt2pdf.py)   |
+| 2    | ppt2img   | PPT转图片 | [视频](https://www.bilibili.com/video/BV1pu411Y7zz/)                    | [源码](https://github.com/CoderWanFeng/python-office/blob/master/demo/poppt/ppt2img.py)   |
+| 3    | merge4ppt | 合并PPT   | [文档](https://blog.csdn.net/weixin_42321517/article/details/130877688) | [源码](https://github.com/CoderWanFeng/python-office/blob/master/demo/poppt/merge4ppt.py) |
 
 
 
@@ -89,4 +87,8 @@ python-office欢迎任何人来添砖加瓦，贡献代码，建议提交的pr�
 ## 📌联系作者
 
 
-![CoderWanFeng](https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office-qr.jpg)
+<p align="center" id='开源交流群-banner'>
+<a target="_blank" href='https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office.jpg'>
+<img src="https://python-office-1300615378.cos.ap-chongqing.myqcloud.com/python-office-qr.jpg" width="100%"/>
+</a> 
+</p>

@@ -1,0 +1,5 @@
+pytest
+pywin32
+poprogress
+pofile
+Pillow

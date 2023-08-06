@@ -1,3 +1,2 @@
-pip freeze > allpackages.txt
-pip uninstall -r allpackages.txt -y
-pip install --upgrade poppt
+pip3.11 freeze > allpackages.txt
+pip3.11 uninstall -r allpackages.txt -y

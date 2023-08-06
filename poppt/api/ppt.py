@@ -20,14 +20,14 @@ def ppt2pdf(path: str, output_path='./'):
 
 # def ppt2img(intput_path, output_path=r'./', img_type='img'):
 #     mainPPT.ppt2img(intput_path, output_path, img_type)
-def ppt2img(input_path, output_path, img_type):
+def ppt2img(input_path, output_path, merge=False):
     """
     :param intput_path:
     :param output_path:
     :param img_type:
     :return:
     """
-    mainPPT.ppt2img(input_path, output_path, img_type)
+    mainPPT.ppt2img(input_path, output_path, merge)
 
 
 def merge4ppt(input_path, output_path=r'./', output_name='merge4ppt.pptx'):
