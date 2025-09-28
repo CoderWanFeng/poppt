@@ -7,6 +7,7 @@ from PIL import Image
 from pofile import get_files, mkdir, check_suffix
 from poprogress import simple_progress
 
+
 from poppt.lib.ppt.ppt2pdf_service import ppt2pdf_single
 
 
@@ -38,9 +39,12 @@ class MainPPT():
         :param path: ppt所在文件路径
         :return: None
         """
+        # if type(input_path) == list:
+        #     ppt_file_list = [Path(ppt_file).absolute() for ppt_file in input_path]
+        # else:
         abs_input_path = Path(input_path).absolute()  # 相对路径→绝对路径
-        exsit, abs_output_path = mkdir(output_path)
         ppt_file_list = get_files(abs_input_path)
+        exsit, abs_output_path = mkdir(output_path)
         save_path = Path(abs_output_path) / output_name
 
         Application = win32com.client.gencache.EnsureDispatch(self.app)
