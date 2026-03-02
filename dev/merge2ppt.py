@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 '''
 @作者：B站/抖音/微博/小红书/公众号，都叫：程序员晚枫
-@读者群：http://www.python4office.cn/wechat-group/
+@读者群：https://www.python4office.cn/wechat-group/
 @个人网站：www.python-office.com
 @Date：2023/5/25 22:44 
 @Thanks：https://zhuanlan.zhihu.com/p/434485047
@@ -74,4 +74,4 @@ output_path = r"D:\workplace\code\github\poppt\dev\docs\output"
 output_name = "test.pptx"
 
 # 调用 merge4ppt 函数执行合并操作
-merge4ppt(input_path, output_path, output_name)
+merge4ppt(input_path=input_path, output_path=output_path, output_name=output_name)

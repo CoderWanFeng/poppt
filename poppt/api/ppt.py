@@ -8,6 +8,8 @@
 # Created Time:  2022-4-25 10:17:34
 # Description: 有关 PPT 的自动化操作 API 接口层
 #############################################
+# 导入操作系统模块，用于路径转换
+import os
 # 导入 PPT 的核心处理类
 from poppt.core.PPTType import MainPPT
 
@@ -20,21 +22,24 @@ mainPPT = MainPPT()
 def ppt2pdf(path: str, output_path='./'):
     """
     将 PPT/PPTX 文件转换为 PDF 格式
-    
+
     Args:
         path: PPT 文件或文件夹路径
         output_path: PDF 文件的输出路径，默认为当前目录
-    
+
     Returns:
         None
     """
-    mainPPT.ppt2pdf(path, output_path)
+    # 将路径转换为绝对路径
+    path = os.path.abspath(path)
+    output_path = os.path.abspath(output_path)
+    mainPPT.ppt2pdf(path=path, output_path=output_path)
 
 
 def ppt2img(input_path: str, output_path=r'./', merge: bool = False):
     """
     将 PPT 转换为图片，支持转为单独图片或合并为长图
-    
+
     Args:
         input_path: 存放 PPT 的位置，
                     转换单个文件 → 可以写文件的路径
@@ -47,19 +52,27 @@ def ppt2img(input_path: str, output_path=r'./', merge: bool = False):
         None
 
     """
-    mainPPT.ppt2img(input_path, output_path, merge)
+    # 将路径转换为绝对路径
+    input_path = os.path.abspath(input_path)
+    output_path = os.path.abspath(output_path)
+    mainPPT.ppt2img(input_path=input_path,
+                    output_path=output_path, merge=merge)
 
 
 def merge4ppt(input_path, output_path=r'./', output_name='merge4ppt.pptx'):
     """
     合并多个 PPT 文件为一个完整的 PPT 文件
-    
+
     Args:
         input_path: 包含多个 PPT 文件的文件夹路径
         output_path: 合并后 PPT 文件的输出路径，默认为当前目录
         output_name: 合并后 PPT 文件的名称，默认为 'merge4ppt.pptx'
-    
+
     Returns:
         None
     """
-    mainPPT.merge4ppt(input_path, output_path, output_name)
+    # 将路径转换为绝对路径
+    input_path = os.path.abspath(input_path)
+    output_path = os.path.abspath(output_path)
+    mainPPT.merge4ppt(input_path=input_path,
+                      output_path=output_path, output_name=output_name)
